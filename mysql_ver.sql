@@ -21,9 +21,19 @@ CREATE TABLE employees (
 );
 
 CREATE TABLE services (
-	test VARCHAR(10)
+	service_id INTEGER NOT NULL AUTO_INCREMENT,
+    service_name VARCHAR(50) NOT NULL,
+    service_price DOUBLE NOT NULL,
+    PRIMARY KEY (service_id)
 );
 
 CREATE TABLE appointments (
-	test VARCHAR(10)
+	appointment_id INTEGER NOT NULL AUTO_INCREMENT,
+    cust_id INTEGER NOT NULL,
+    emp_id INTEGER NOT NULL,
+    service_id INTEGER NOT NULL,
+    PRIMARY KEY (appointment_id),
+    FOREIGN KEY fk_cust_id (cust_id) REFERENCES customers(cust_id),
+    FOREIGN KEY fk_emp_id (emp_id) REFERENCES employees(cust_id),
+    FOREIGN KEY fk_service_id (service_id) REFERENCES services(cust_id)
 );
