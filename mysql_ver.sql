@@ -3,12 +3,21 @@ SHOW databases;
 CREATE DATABASE shop;
 USE shop;
 
+/* Creation of tables */
 CREATE TABLE customers (
-	test VARCHAR(10)
+	cust_id INTEGER NOT NULL AUTO_INCREMENT,
+    cust_fname VARCHAR(30) NOT NULL,
+    cust_lname VARCHAR(30) NOT NULL,
+    cust_phone VARCHAR(10),
+    PRIMARY KEY (cust_id)
 );
 
 CREATE TABLE employees (
-	test VARCHAR(10)
+	emp_id INTEGER NOT NULL AUTO_INCREMENT,
+    emp_fname VARCHAR(30) NOT NULL,
+    emp_lname VARCHAR(30) NOT NULL,
+    emp_phone VARCHAR(10),
+    PRIMARY KEY (emp_id)
 );
 
 CREATE TABLE services (
