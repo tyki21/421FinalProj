@@ -32,8 +32,16 @@ CREATE TABLE appointments (
     cust_id INTEGER NOT NULL,
     emp_id INTEGER NOT NULL,
     service_id INTEGER NOT NULL,
-    PRIMARY KEY (appointment_id),
-    FOREIGN KEY fk_cust_id (cust_id) REFERENCES customers(cust_id),
-    FOREIGN KEY fk_emp_id (emp_id) REFERENCES employees(cust_id),
-    FOREIGN KEY fk_service_id (service_id) REFERENCES services(cust_id)
+    PRIMARY KEY (appointment_id)
+    /*
+    FOREIGN KEY (cust_id) REFERENCES customers(cust_id),
+    FOREIGN KEY (emp_id) REFERENCES employees(cust_id),
+    FOREIGN KEY (service_id) REFERENCES services(cust_id)
+    */
 );
+
+/* DROPS TABLES */
+DROP TABLE customers;
+DROP TABLE employees;
+DROP TABLE services;
+DROP TABLE appointments;
