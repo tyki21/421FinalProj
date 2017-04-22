@@ -11,8 +11,7 @@ CREATE TABLE Appointments
     appt_ID            NUMBER (7) NOT NULL ,
     Services_serv_ID   NUMBER (7) NOT NULL ,
     Employees_emp_ID   NUMBER (7) NOT NULL ,
-    Services_serv_ID1  NUMBER (7) NOT NULL ,
-    Customers_cust_ID1 NUMBER (7) NOT NULL
+    Customers_cust_ID NUMBER (7) NOT NULL
   ) ;
 ALTER TABLE Appointments ADD CONSTRAINT Appointments_PK PRIMARY KEY ( appt_ID ) ;
 
@@ -42,23 +41,21 @@ CREATE TABLE Services
     serv_price        NUMBER (7,2) ,
     serv_name         VARCHAR2 (30) ,
     serv_ID           NUMBER (7) NOT NULL ,
-    Employees_emp_ID1 NUMBER (7) NOT NULL ,
+    Employees_emp_ID NUMBER (7) NOT NULL ,
     Customers_cust_ID NUMBER (7) NOT NULL
   ) ;
 ALTER TABLE Services ADD CONSTRAINT Services_PK PRIMARY KEY ( serv_ID ) ;
 
 
-ALTER TABLE Appointments ADD CONSTRAINT Appointments_Customers_FKv1 FOREIGN KEY ( Customers_cust_ID1 ) REFERENCES Customers ( cust_ID ) ;
+ALTER TABLE Appointments ADD CONSTRAINT Appointments_Customers_FKv1 FOREIGN KEY ( Customers_cust_ID ) REFERENCES Customers ( cust_ID ) ;
 
 ALTER TABLE Appointments ADD CONSTRAINT Appointments_Employees_FK FOREIGN KEY ( Employees_emp_ID ) REFERENCES Employees ( emp_ID ) ;
 
 ALTER TABLE Appointments ADD CONSTRAINT Appointments_Services_FK FOREIGN KEY ( Services_serv_ID ) REFERENCES Services ( serv_ID ) ;
 
-ALTER TABLE Appointments ADD CONSTRAINT Appointments_Services_FKv1 FOREIGN KEY ( Services_serv_ID1 ) REFERENCES Services ( serv_ID ) ;
-
 ALTER TABLE Services ADD CONSTRAINT Services_Customers_FK FOREIGN KEY ( Customers_cust_ID ) REFERENCES Customers ( cust_ID ) ;
 
-ALTER TABLE Services ADD CONSTRAINT Services_Employees_FKv1 FOREIGN KEY ( Employees_emp_ID1 ) REFERENCES Employees ( emp_ID ) ;
+ALTER TABLE Services ADD CONSTRAINT Services_Employees_FKv1 FOREIGN KEY ( Employees_emp_ID ) REFERENCES Employees ( emp_ID ) ;
 
 
 -- Oracle SQL Developer Data Modeler Summary Report: 
