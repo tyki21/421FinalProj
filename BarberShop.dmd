@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="BarberShop" id="93CE8571-DA31-BE46-3F7E-DD38454A5EF7" version="3.5">
-<createdBy>Tykiera</createdBy>
-<createdTime>2017-04-22 01:43:27 UTC</createdTime>
-<ownerDesignName>BarberShop</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>93CE8571-DA31-BE46-3F7E-DD38454A5EF7</designId>
-</OSDM_Design>
