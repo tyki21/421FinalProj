@@ -21,7 +21,7 @@ CREATE TABLE Customers
     cust_fname       VARCHAR2 (30) NOT NULL ,
     cust_lname       VARCHAR2 (30) NOT NULL ,
     cust_phone       VARCHAR2 (12) NOT NULL ,
-    cust_ID          NUMBER (7) NOT NULL ,
+    cust_ID          NUMBER (7) NOT NULL
   ) ;
 ALTER TABLE Customers ADD CONSTRAINT Customers_PK PRIMARY KEY ( cust_ID ) ;
 
@@ -40,7 +40,7 @@ CREATE TABLE Services
   (
     serv_price        NUMBER (7,2) ,
     serv_name         VARCHAR2 (30) ,
-    serv_ID           NUMBER (7) NOT NULL ,
+    serv_ID           NUMBER (7) NOT NULL
   ) ;
 ALTER TABLE Services ADD CONSTRAINT Services_PK PRIMARY KEY ( serv_ID ) ;
 
