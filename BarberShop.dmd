@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="BarberShop" id="475395A6-127F-8E12-F3F4-40593DD487F7" version="3.5">
+<createdBy>Tykiera</createdBy>
+<createdTime>2017-04-28 00:42:12 UTC</createdTime>
+<ownerDesignName>BarberShop</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>475395A6-127F-8E12-F3F4-40593DD487F7</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="93CE8571-DA31-BE46-3F7E-DD38454A5EF7">
+<designStoragePath>C:\Users\Tykiera\BarberShop</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="475395A6-127F-8E12-F3F4-40593DD487F7">
+<designStoragePath>C:\Users\Tykiera\BarberShop</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>
